@@ -6783,6 +6783,17 @@ button.bg-primary:focus {
   background-color: #f7d259 !important;
 }
 
+.bg-primary2 {
+  background-color: #4a6c89 !important;
+}
+
+a.bg-primary2:hover,
+a.bg-primary2:focus,
+button.bg-primary2:hover,
+button.bg-primary2:focus {
+  background-color: #4a6c89 !important;
+}
+
 .bg-orange {
   background-color: #fece26 !important;
 }
@@ -10335,7 +10346,7 @@ h6,
 
 .bg-registration {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/registration.jpg), no-repeat center center;
+    url(../img/Galery//galery.jpg), no-repeat center center;
   background-size: cover;
 }
 
