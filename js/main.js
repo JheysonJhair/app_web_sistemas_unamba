@@ -223,27 +223,193 @@
 
   const docentes = [
     {
-      name: "Dr. Juan Pérez",
-      degree: "Doctor en Matemáticas",
-      category: "Titular",
-      email: "juan.perez@universidad.edu",
-      cv: "https://drive.google.com/file/d/1jCXeVxX1qekdJYlXucexf7dzxh_MkHhR/view",
+      name: "Manuel Jesús Ibarra Cabrera",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. Pri-TC",
+      email: "mibarra@unamba.edu.pe",
     },
     {
-      name: "Mtra. Ana López",
-      degree: "Maestra en Física",
-      category: "Adjunta",
-      email: "ana.lopez@universidad.edu",
-      cv: "https://drive.google.com/file/d/1jCXeVxX1qekdJYlXucexf7dzxh_MkHhR/view",
+      name: "Ecler Mamani Vilca",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. Pri-TC",
+      email: "emamani@unamba.edu.pe",
     },
     {
-      name: "Ing. Carlos García",
-      degree: "Ingeniero en Sistemas",
-      category: "Titular",
-      email: "carlos.garcia@universidad.edu",
-      cv: "https://drive.google.com/file/d/1jCXeVxX1qekdJYlXucexf7dzxh_MkHhR/view",
+      name: "Erech Ordoñez Ramos",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. Pri-TC",
+      email: "eordonez@unamba.edu.pe",
+    },
+    {
+      name: "José Luis Merma Aroni",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. Pri-TC",
+      email: "jmerma@unamba.edu.pe",
+    },
+    {
+      name: "Evelyn Naida Luque Ochoa",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "eluque@unamba.edu.pe",
+    },
+    {
+      name: "Francisco Cari Incahuanco",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "fcari@unamba.edu.pe",
+    },
+    {
+      name: "Marleny Peralta Ascues",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "mperalta@unamba.edu.pe",
+    },
+    {
+      name: "Ebert Gomez Aiquipa",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "egomez@unamba.edu.pe",
+    },
+    {
+      name: "Nora Gladys Echegaray Peña",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "nechegaray@unamba.edu.pe",
+    },
+    {
+      name: "Maryluz Cuentas Toledo",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "mcuentas@unamba.edu.pe",
+    },
+    {
+      name: "Mario Aquino Cruz",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "maquino@unamba.edu.pe",
+    },
+    {
+      name: "Hesmeralda Rojas Enriquez",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "hrojas@unamba.edu.pe",
+    },
+    {
+      name: "Lintol Contreras Salas",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "P. ASOC-TC",
+      email: "lcontreras@unamba.edu.pe",
+    },
+    {
+      name: "Ronald Alberto Renteria Ayquipa",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "rrenteria@unamba.edu.pe",
+    },
+    {
+      name: "Rafael Ricardo Quispe Merma",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "rquispe@unamba.edu.pe",
+    },
+    {
+      name: "Kevin Arnold Arias Figueroa",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "karias@unamba.edu.pe",
+    },
+    {
+      name: "Yonatan Mamani Coaquira",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "ymamani@unamba.edu.pe",
+    },
+    {
+      name: "Virgilio Martinez Duran",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTP",
+      email: "vmartinez@unamba.edu.pe",
+    },
+    {
+      name: "Alejandrina Huaylla Quispe",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB1",
+      email: "ahuaylla@unamba.edu.pe",
+    },
+    {
+      name: "Luis Miguel Alfaro Chirinos",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB1",
+      email: "lalfaro@unamba.edu.pe",
+    },
+    {
+      name: "Elvio Tintaya Zegarra",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB1",
+      email: "etintaya@unamba.edu.pe",
+    },
+    {
+      name: "Betsabe Milagros Ccolqque Ruiz",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB1",
+      email: "bccolqque@unamba.edu.pe",
+    },
+    {
+      name: "Luz Liliana Criado Huaylla",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB1",
+      email: "lcriado@unamba.edu.pe",
+    },
+    {
+      name: "Yuliana Miriam Tomaylla Gutierrez",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB2",
+      email: "ytomaylla@unamba.edu.pe",
+    },
+    {
+      name: "Karina Gamarra Peralta",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "DCB2",
+      email: "kgamarra@unamba.edu.pe",
+    },
+    {
+      name: "Moises Delfin Jove Yucra",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "mjove@unamba.edu.pe",
+    },
+    {
+      name: "John Abraham Aguirre Carrasco",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "jaguirre@unamba.edu.pe",
+    },
+    {
+      name: "Daryl Andres Huaman Lopez",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "AuxTC",
+      email: "dhuaman@unamba.edu.pe",
+    },
+    {
+      name: "Kely Segundo Villa",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "JP",
+      email: "ksegundo@unamba.edu.pe",
+    },
+    {
+      name: "Nancy Arone Huarcaya",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "JP",
+      email: "narone@unamba.edu.pe",
+    },
+    {
+      name: "Cesar Isaac Diaz Navarro",
+      degree: "Ingeniero Informático y Sistemas",
+      category: "JP",
+      email: "cdiaz@unamba.edu.pe",
     },
   ];
+  
   
   function loadDocentes() {
     const tableBody = document.getElementById("docentes-list");
@@ -255,7 +421,7 @@
 
       const nameCell = document.createElement("td");
       const nameSpan = document.createElement("span");
-      nameSpan.innerHTML = ` <i class="fas fa-user bg-primary" style="font-size: 24px; width: 45px; height: 45px; display: inline-flex; align-items: center; justify-content: center; color: white; border-radius: 50%;"></i> ${docente.name}`;
+      nameSpan.innerHTML = ` <i class="fas fa-user bg-primary" style="font-size: 10px; width: 25px; height: 25px; display: inline-flex; align-items: center; justify-content: center; color: white; border-radius: 50%;"></i> ${docente.name}`;
       nameCell.appendChild(nameSpan);
       row.appendChild(nameCell);
   
@@ -315,7 +481,8 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (section) {
       case "areas-curriculares":
         contentContainer.innerHTML = `
-        <table class="table-auto w-full border-collapse border border-gray-300">
+        <div class="table-responsive">
+        <table class="table table-bordered table-nowrap text-center">
         <thead>
           <tr>
             <th rowspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">ASIGNATURAS DE</th>
@@ -373,7 +540,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <td class="border border-gray-300 px-4 py-2 text-center">100.00%</td>
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
         `;
         break;
       case "malla-curricular":
@@ -383,7 +551,8 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "plan-de-estudios":
         contentContainer.innerHTML = `
-      <table class="table-auto w-full border-collapse border border-gray-300">
+      <div class="table-responsive">
+        <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1485,12 +1654,13 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
+    </div>
 
         `;
         break;
       case "resolucion":
         contentContainer.innerHTML = `
-        <p>La resolución CU-0335-2018-UNSAAC aprueba el plan de estudios y la malla curricular de la Escuela profesional de Ingenierí­a Informática y de Sistemas.</p>
+        <p>La resolución CU-536-2019-UNAMBA aprueba el plan de estudios y la malla curricular de la Escuela profesional de Ingenierí­a Informática y de Sistemas.</p>
         <a href="pdf/UNAMBA/RESOLUCION-SISTEMAS.pdf"target="_blank" class="btn btn-primary align-self-start">Abrir Resolución</a>
         `;
         break;

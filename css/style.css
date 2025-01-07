@@ -10343,7 +10343,11 @@ h6,
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
+.hover-effect:hover {
+  background-color: #EAF1F7;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .bg-registration {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../img/Galery//galery.jpg), no-repeat center center;
