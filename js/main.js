@@ -227,12 +227,14 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. Pri-TC",
       email: "mibarra@unamba.edu.pe",
+      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2511"
     },
     {
       name: "Ecler Mamani Vilca",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. Pri-TC",
       email: "emamani@unamba.edu.pe",
+      cv:"https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=4885"
     },
     {
       name: "Erech Ordoñez Ramos",
@@ -263,6 +265,7 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "mperalta@unamba.edu.pe",
+      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96584"
     },
     {
       name: "Ebert Gomez Aiquipa",
@@ -281,18 +284,21 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "mcuentas@unamba.edu.pe",
+      cv:"https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=13799"
     },
     {
       name: "Mario Aquino Cruz",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "maquino@unamba.edu.pe",
+      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=98716"
     },
     {
       name: "Hesmeralda Rojas Enriquez",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "hrojas@unamba.edu.pe",
+      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=36648"
     },
     {
       name: "Lintol Contreras Salas",
@@ -655,7 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+     <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -752,7 +758,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+  <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -851,7 +857,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -952,7 +958,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1053,7 +1059,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1158,7 +1164,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1259,7 +1265,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1370,7 +1376,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1471,7 +1477,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         </tbody>
       </table>
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
@@ -1563,7 +1569,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </tbody>
       </table>
 
-      <table class="table-auto w-full border-collapse border border-gray-300">
+       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
         <thead class="bg-primary text-white">
           <tr class="bg-gray-300">
             <td
