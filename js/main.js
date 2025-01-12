@@ -60,8 +60,8 @@
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelectorAll('[id$="-tab"]'); 
-    const tabContents = document.querySelectorAll(".tab-pane"); 
+    const tabs = document.querySelectorAll('[id$="-tab"]');
+    const tabContents = document.querySelectorAll(".tab-pane");
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
@@ -74,7 +74,7 @@
         });
         tab.classList.add("active");
 
-        const targetId = tab.getAttribute("data-bs-target").substring(1); 
+        const targetId = tab.getAttribute("data-bs-target").substring(1);
         const targetContent = document.getElementById(targetId);
         targetContent.classList.add("show", "active");
       });
@@ -84,7 +84,7 @@
   window.onscroll = function () {
     stickyNavbar();
   };
-  
+
   // ---------------------------------------------------------------- FIJAR NAVBAR SCROLL
   var navbar = document.getElementById("navbar");
   var sticky = navbar.offsetTop;
@@ -172,7 +172,7 @@
 
   function loadPdfFiles() {
     const tableBody = document.getElementById("document-list");
-    tableBody.innerHTML = ""; 
+    tableBody.innerHTML = "";
 
     pdfFiles.forEach((file) => {
       const row = document.createElement("tr");
@@ -191,7 +191,7 @@
       row.appendChild(dateCell);
 
       const sizeCell = document.createElement("td");
-      const sizeInMB = (file.size / (1024 * 1024)).toFixed(2); 
+      const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
       sizeCell.textContent = `${sizeInMB} MB`;
       row.appendChild(sizeCell);
 
@@ -227,14 +227,14 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. Pri-TC",
       email: "mibarra@unamba.edu.pe",
-      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2511"
+      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2511",
     },
     {
       name: "Ecler Mamani Vilca",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. Pri-TC",
       email: "emamani@unamba.edu.pe",
-      cv:"https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=4885"
+      cv: "https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=4885",
     },
     {
       name: "Erech Ordoñez Ramos",
@@ -265,7 +265,7 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "mperalta@unamba.edu.pe",
-      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96584"
+      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96584",
     },
     {
       name: "Ebert Gomez Aiquipa",
@@ -284,21 +284,21 @@
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "mcuentas@unamba.edu.pe",
-      cv:"https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=13799"
+      cv: "https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=13799",
     },
     {
       name: "Mario Aquino Cruz",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "maquino@unamba.edu.pe",
-      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=98716"
+      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=98716",
     },
     {
       name: "Hesmeralda Rojas Enriquez",
       degree: "Ingeniero Informático y Sistemas",
       category: "P. ASOC-TC",
       email: "hrojas@unamba.edu.pe",
-      cv:"https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=36648"
+      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=36648",
     },
     {
       name: "Lintol Contreras Salas",
@@ -415,37 +415,35 @@
       email: "cdiaz@unamba.edu.pe",
     },
   ];
-  
-  
+
   function loadDocentes() {
     const tableBody = document.getElementById("docentes-list");
-    tableBody.innerHTML = ""; 
-  
+    tableBody.innerHTML = "";
+
     docentes.forEach((docente) => {
       const row = document.createElement("tr");
-  
 
       const nameCell = document.createElement("td");
       const nameSpan = document.createElement("span");
       nameSpan.innerHTML = ` <i class="fas fa-user bg-primary" style="font-size: 10px; width: 25px; height: 25px; display: inline-flex; align-items: center; justify-content: center; color: white; border-radius: 50%;"></i> ${docente.name}`;
       nameCell.appendChild(nameSpan);
       row.appendChild(nameCell);
-  
+
       const degreeCell = document.createElement("td");
       degreeCell.textContent = docente.degree;
       row.appendChild(degreeCell);
-  
+
       const categoryCell = document.createElement("td");
       categoryCell.textContent = docente.category;
       row.appendChild(categoryCell);
-  
+
       const emailCell = document.createElement("td");
       const emailIcon = document.createElement("a");
       emailIcon.href = `mailto:${docente.email}`;
       emailIcon.innerHTML = `<i class="fas fa-envelope"></i`;
       emailCell.appendChild(emailIcon);
       row.appendChild(emailCell);
-  
+
       const cvCell = document.createElement("td");
       const cvLink = document.createElement("a");
       cvLink.href = docente.cv;
@@ -453,18 +451,17 @@
       cvLink.innerHTML = `<i class="fas fa-file-alt"></i>`;
       cvCell.appendChild(cvLink);
       row.appendChild(cvCell);
-  
+
       tableBody.appendChild(row);
     });
   }
-  
+
   document.getElementById("showModalBtn2").addEventListener("click", () => {
     const modalElement = document.getElementById("myModal2");
     const modal = new bootstrap.Modal(modalElement);
     modal.show();
     loadDocentes();
   });
-
 })(jQuery);
 
 //---------------------------------------------------------------- PLAN STUDY
@@ -486,1189 +483,213 @@ document.addEventListener("DOMContentLoaded", function () {
 
     switch (section) {
       case "areas-curriculares":
-        contentContainer.innerHTML = `
-        <div class="table-responsive">
-        <table class="table table-bordered table-nowrap text-center">
-        <thead>
-          <tr>
-            <th rowspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">ASIGNATURAS DE</th>
-            <th colspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">NÚMERO DE</th>
-            <th colspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">PORCENTAJE PARA</th>
-          </tr>
-          <tr>
-            <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CURSOS</th>
-            <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CRÉDITOS</th>
-            <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CURSOS</th>
-            <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CRÉDITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">Estudios Generales</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">10</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">35</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">16.33%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">15.98%</td>
-          </tr>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">Estudios Específicos</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">35</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">124</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">56.45%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">56.62%</td>
-          </tr>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">Estudios de Especialidad</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">13</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">45</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">20.97%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">20.55%</td>
-          </tr>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">Actividades Extra Curriculares</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">3</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">6</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">4.84%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">2.74%</td>
-          </tr>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">Prácticas pre profesionales</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">1</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">9</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">1.61%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">4.11%</td>
-          </tr>
-          <tr class="bg-secondary">
-            <td class="border border-gray-300 px-4 py-2 font-bold text-center">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">62</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">219</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">100.00%</td>
-            <td class="border border-gray-300 px-4 py-2 text-center">100.00%</td>
-          </tr>
-        </tbody>
-        </table>
-      </div>
-        `;
+        fetch("http://localhost:1337/api/plan-studio-area-curriculars")
+          .then((response) => response.json())
+          .then((data) => {
+            const totalCursos = data.data.reduce(
+              (acc, item) => acc + item.numero_cursos,
+              0
+            );
+            const totalCreditos = data.data.reduce(
+              (acc, item) => acc + item.numero_creditos,
+              0
+            );
+
+            const tableRows = data.data
+              .map((item) => {
+                const porcentajeCursos = (
+                  (item.numero_cursos / totalCursos) *
+                  100
+                ).toFixed(2);
+                const porcentajeCreditos = (
+                  (item.numero_creditos / totalCreditos) *
+                  100
+                ).toFixed(2);
+
+                return `
+              <tr class="bg-secondary">
+                <td class="border border-gray-300 px-4 py-2 font-bold text-center">${item.asignatura}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${item.numero_cursos}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${item.numero_creditos}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${porcentajeCursos}%</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${porcentajeCreditos}%</td>
+              </tr>
+            `;
+              })
+              .join("");
+
+            const totalRow = `
+            <tr class="bg-secondary">
+              <td class="border border-gray-300 px-4 py-2 font-bold text-center">TOTAL</td>
+              <td class="border border-gray-300 px-4 py-2 text-center">${totalCursos}</td>
+              <td class="border border-gray-300 px-4 py-2 text-center">${totalCreditos}</td>
+              <td class="border border-gray-300 px-4 py-2 text-center">100%</td> 
+              <td class="border border-gray-300 px-4 py-2 text-center">100%</td> 
+            </tr>
+          `;
+
+            contentContainer.innerHTML = `
+            <div class="table-responsive">
+              <table class="table table-bordered table-nowrap text-center">
+                <thead>
+                  <tr>
+                    <th rowspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">ASIGNATURAS DE</th>
+                    <th colspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">NÚMERO DE</th>
+                    <th colspan="2" class="bg-primary text-white border border-gray-300 px-4 py-2 text-center">PORCENTAJE PARA</th>
+                  </tr>
+                  <tr>
+                    <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CURSOS</th>
+                    <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CRÉDITOS</th>
+                    <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CURSOS</th>
+                    <th class="bg-primary2 text-white border border-gray-300 px-4 py-2 text-center">CRÉDITOS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${tableRows}
+                  ${totalRow}
+                </tbody>
+              </table>
+            </div>
+          `;
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+            contentContainer.innerHTML = `<p>Hubo un error al cargar los datos.</p>`;
+          });
         break;
       case "malla-curricular":
-        contentContainer.innerHTML = `
-          <img src="./img/UNAMBA/MALLA-CURRICULAR-SISTEMAS.png" alt="Malla Curricular" class="img-fluid">
-        `;
+        fetch("http://localhost:1337/api/plan-studio-malla-curriculars")
+          .then((response) => response.json())
+          .then((data) => {
+            const imageUrl = data.data[0]?.urlImage;
+
+            if (imageUrl) {
+              contentContainer.innerHTML = `
+                    <img src="${imageUrl}" alt="Malla Curricular" class="img-fluid">
+                  `;
+            } else {
+              contentContainer.innerHTML = `
+                    <p>No se encontró la imagen de la malla curricular.</p>
+                  `;
+            }
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+            contentContainer.innerHTML = `<p>Hubo un error al cargar los datos.</p>`;
+          });
         break;
+
       case "plan-de-estudios":
-        contentContainer.innerHTML = `
-      <div class="table-responsive">
-        <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              PRIMER SEMESTRE
-            </td>
-          </tr>
-        </thead>
+        fetch("http://localhost:1337/api/plan-studio-asignaturas?pagination[page]=1&pagination[pageSize]=100")
+          .then((response) => response.json())
+          .then((data) => {
+            const semestres = data.data.reduce((acc, item) => {
+              if (!acc[item.NOMBRE_SEMESTRE]) {
+                acc[item.NOMBRE_SEMESTRE] = [];
+              }
+              acc[item.NOMBRE_SEMESTRE].push(item);
+              return acc;
+            }, {});
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS101</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Introducción a la Informática y Sistemas
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS102</td>
-            <td class="border border-gray-300 px-4 py-2">Matemáticas Discretas I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS103</td>
-            <td class="border border-gray-300 px-4 py-2">Matemáticas Básicas</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS104</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Redacción y Argumentación
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS105</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Geografía y Recursos Naturales
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS106</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">16</td>
-            <td class="border border-gray-300 px-4 py-2">12</td>
-            <td class="border border-gray-300 px-4 py-2">28</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-     <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              SEGUNDO SEMESTRE
-            </td>
-          </tr>
-        </thead>
+            let allTables = "";
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS201</td>
-            <td class="border border-gray-300 px-4 py-2">Algorítmica I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">7</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">IS101</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS202</td>
-            <td class="border border-gray-300 px-4 py-2">Matemáticas Discretas II</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS102</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS203</td>
-            <td class="border border-gray-300 px-4 py-2">Geometría Analítica</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS103</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS204</td>
-            <td class="border border-gray-300 px-4 py-2">Ecología</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS205</td>
-            <td class="border border-gray-300 px-4 py-2">Realidad Nacional</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS206</td>
-            <td class="border border-gray-300 px-4 py-2">Psicología</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">15</td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">29</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-  <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              TERCER SEMESTRE
-            </td>
-          </tr>
-        </thead>
+            Object.entries(semestres).forEach(([semestre, items]) => {
+              const sortedItems = items.sort((a, b) =>
+                a.codigo.localeCompare(b.codigo)
+              );
+              const totalT = sortedItems.reduce((acc, item) => acc + item.t, 0);
+              const totalP = sortedItems.reduce((acc, item) => acc + item.p, 0);
+              const totalH = sortedItems.reduce((acc, item) => acc + item.h, 0);
+              const totalCR = sortedItems.reduce(
+                (acc, item) => acc + item.cr,
+                0
+              );
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS301</td>
-            <td class="border border-gray-300 px-4 py-2">Algorítmica II</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">7</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">IS201</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS302</td>
-            <td class="border border-gray-300 px-4 py-2">Sistemas Operativos</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS303</td>
-            <td class="border border-gray-300 px-4 py-2">Cálculo I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS203</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS304</td>
-            <td class="border border-gray-300 px-4 py-2">Filosofía</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS305</td>
-            <td class="border border-gray-300 px-4 py-2">Economía</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS306</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Historia del Perú y del Mundo
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">15</td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">29</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              CUARTO SEMESTRE
-            </td>
-          </tr>
-        </thead>
+              const tableRows = sortedItems
+                .map((item) => {
+                  return `
+                  <tr class="bg-secondary">
+                    <td class="border border-gray-300 px-4 py-2 font-bold text-center">${item.codigo}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.asignatura}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.categoria}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.t}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.p}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.h}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.cr}</td>
+                    <td class="border border-gray-300 px-4 py-2 text-center">${item.requisitos}</td>
+                  </tr>
+                `;
+                })
+                .join("");
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS401</td>
-            <td class="border border-gray-300 px-4 py-2">Algorítmica III</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS301</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS402</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Sistema de Gestión de Base de Datos I
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS403</td>
-            <td class="border border-gray-300 px-4 py-2">Física I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS404</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Lenguajes Formales y Compiladores
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS405</td>
-            <td class="border border-gray-300 px-4 py-2">Cálculo II</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS303</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS406</td>
-            <td class="border border-gray-300 px-4 py-2">Relaciones Públicas</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">15</td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">29</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              QUINTO SEMESTRE
-            </td>
-          </tr>
-        </thead>
+              const totalRow = `
+              <tr class="bg-secondary">
+                <td class="border border-gray-300 px-4 py-2 font-bold text-center">TOTAL</td>
+                <td class="border border-gray-300 px-4 py-2 font-bold text-center"></td>
+                <td class="border border-gray-300 px-4 py-2 font-bold text-center"></td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${totalT}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${totalP}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${totalH}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center">${totalCR}</td>
+                <td class="border border-gray-300 px-4 py-2 text-center"></td>
+              </tr>
+            `;
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS501</td>
-            <td class="border border-gray-300 px-4 py-2">Taller de Programación I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">0</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">IS401</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS502</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Sistema de Gestión de Base de Datos II
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS402</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS503</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Análisis y Diseño de Sistemas de Información I
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS504</td>
-            <td class="border border-gray-300 px-4 py-2">Administración Moderna</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS505</td>
-            <td class="border border-gray-300 px-4 py-2">Física II</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS403</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS506</td>
-            <td class="border border-gray-300 px-4 py-2">Ecuaciones Diferenciales</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS405</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">15</td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">29</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              SEXTO SEMESTRE
-            </td>
-          </tr>
-        </thead>
+              allTables += `
+              <div class="table-responsive">
+                <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
+                  <thead class="bg-primary text-white">
+                    <tr class="bg-gray-300">
+                      <td colspan="8" class="bg-primary text-center text-white font-bold px-4 py-2">
+                        ${semestre}
+                      </td>
+                    </tr>
+                  </thead>
+                  <thead class="bg-primary text-white">
+                    <tr>
+                      <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
+                      <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
+                      <th class="border border-gray-300 px-4 py-2">CAT</th>
+                      <th class="border border-gray-300 px-4 py-2">T</th>
+                      <th class="border border-gray-300 px-4 py-2">P</th>
+                      <th class="border border-gray-300 px-4 py-2">H</th>
+                      <th class="border border-gray-300 px-4 py-2">CR</th>
+                      <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${tableRows}
+                    ${totalRow}
+                  </tbody>
+                </table>
+              </div>
+            `;
+            });
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS601</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Taller de Programación II
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">0</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">IS501</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS602</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Análisis y Diseño de Sistemas de Información II
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS503</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS603</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Circuitos Eléctricos y Electrónicos
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS505</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS604</td>
-            <td class="border border-gray-300 px-4 py-2">Métodos Numéricos</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS605</td>
-            <td class="border border-gray-300 px-4 py-2">Investigación Operativa</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS606</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Formulación y Evaluación de Proyectos Informáticos
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">16</td>
-            <td class="border border-gray-300 px-4 py-2">30</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              SÉPTIMO SEMESTRE
-            </td>
-          </tr>
-        </thead>
+            contentContainer.innerHTML = allTables;
+          })
+          .catch((error) => {
+            console.error("Error al obtener los datos:", error);
+            contentContainer.innerHTML = `<p>Hubo un error al cargar los datos.</p>`;
+          });
 
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS701</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Taller de Programación III
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">0</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">IS601</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS702</td>
-            <td class="border border-gray-300 px-4 py-2">Ingeniería de Software I</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">IS602</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS703</td>
-            <td class="border border-gray-300 px-4 py-2">Sistemas Digitales</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS603</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS704</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Arquitectura del Computador
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS705</td>
-            <td class="border border-gray-300 px-4 py-2">Estadística Descriptiva</td>
-            <td class="border border-gray-300 px-4 py-2">AFG</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS706</td>
-            <td class="border border-gray-300 px-4 py-2">Planeamiento Estratégico</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">16</td>
-            <td class="border border-gray-300 px-4 py-2">30</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              OCTAVO SEMESTRE
-            </td>
-          </tr>
-        </thead>
-
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS801</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Desarrollo de Sistemas Orientado a Internet
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">0</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">IS701</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS802</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Ingeniería de Software II
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS702</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS803</td>
-            <td class="border border-gray-300 px-4 py-2">Redes de Computadoras</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS804</td>
-            <td class="border border-gray-300 px-4 py-2">Estadística Inferencial</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS705</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS805</td>
-            <td class="border border-gray-300 px-4 py-2">Marketing</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS806</td>
-            <td class="border border-gray-300 px-4 py-2">Actividades</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">1</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">140 Cred</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">Electivo</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">12</td>
-            <td class="border border-gray-300 px-4 py-2">20</td>
-            <td class="border border-gray-300 px-4 py-2">32</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              NOVENO SEMESTRE
-            </td>
-          </tr>
-        </thead>
-
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS901</td>
-            <td class="border border-gray-300 px-4 py-2">Comercio Electrónico</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS801</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS902</td>
-            <td class="border border-gray-300 px-4 py-2">Inteligencia Artificial</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS903</td>
-            <td class="border border-gray-300 px-4 py-2">Telecomunicaciones</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS803</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS904</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Metodología de la Investigación
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS905</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Sistemas de Información Gerencial
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">Electivo</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">15</td>
-            <td class="border border-gray-300 px-4 py-2">14</td>
-            <td class="border border-gray-300 px-4 py-2">29</td>
-            <td class="border border-gray-300 px-4 py-2">22</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              DÉCIMO SEMESTRE
-            </td>
-          </tr>
-        </thead>
-
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS1001</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Seguridad Protección y Auditoria Informática
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS1002</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Administración de Tecnologías de la Información
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">6</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS1003</td>
-            <td class="border border-gray-300 px-4 py-2">Sistemas Distribuidos</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">IS1004</td>
-            <td class="border border-gray-300 px-4 py-2">Seminario de Tesis</td>
-            <td class="border border-gray-300 px-4 py-2">AFPO</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">5</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">IS904</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">Electivo</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">TOTAL</td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2"></td>
-            <td class="border border-gray-300 px-4 py-2">12</td>
-            <td class="border border-gray-300 px-4 py-2">12</td>
-            <td class="border border-gray-300 px-4 py-2">24</td>
-            <td class="border border-gray-300 px-4 py-2">18</td>
-            <td class="border border-gray-300 px-4 py-2">-</td>
-          </tr>
-        </tbody>
-      </table>
-
-       <table class="table table-bordered table-nowrap text-center border-collapse border border-gray-300">
-        <thead class="bg-primary text-white">
-          <tr class="bg-gray-300">
-            <td
-              colspan="8"
-              class="bg-primary text-center text-white font-bold px-4 py-2"
-            >
-              CURSOS ELECTIVOS
-            </td>
-          </tr>
-        </thead>
-
-        <thead class="bg-primary text-white">
-          <tr>
-            <th class="border border-gray-300 px-4 py-2">CÓDIGO</th>
-            <th class="border border-gray-300 px-4 py-2">ASIGNATURA</th>
-            <th class="border border-gray-300 px-4 py-2">CAT</th>
-            <th class="border border-gray-300 px-4 py-2">T</th>
-            <th class="border border-gray-300 px-4 py-2">P</th>
-            <th class="border border-gray-300 px-4 py-2">H</th>
-            <th class="border border-gray-300 px-4 py-2">CR</th>
-            <th class="border border-gray-300 px-4 py-2">REQUISITOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE01</td>
-            <td class="border border-gray-300 px-4 py-2">Computación Gráfica</td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE02</td>
-            <td class="border border-gray-300 px-4 py-2">Sistemas Distribuidos</td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE03</td>
-            <td class="border border-gray-300 px-4 py-2">Robótica</td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE04</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Programación Concurrente y Distribuida
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE05</td>
-            <td class="border border-gray-300 px-4 py-2">Telecomunicaciones II</td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-          <tr>
-            <td class="border border-gray-300 px-4 py-2">ISE06</td>
-            <td class="border border-gray-300 px-4 py-2">
-              Ensamblaje y Mantenimiento de Computadoras
-            </td>
-            <td class="border border-gray-300 px-4 py-2">AFPE</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">2</td>
-            <td class="border border-gray-300 px-4 py-2">4</td>
-            <td class="border border-gray-300 px-4 py-2">3</td>
-            <td class="border border-gray-300 px-4 py-2">Ninguno</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-        `;
         break;
       case "resolucion":
-        contentContainer.innerHTML = `
-        <p>La resolución CU-536-2019-UNAMBA aprueba el plan de estudios y la malla curricular de la Escuela profesional de Ingenierí­a Informática y de Sistemas.</p>
-        <a href="pdf/UNAMBA/RESOLUCION-SISTEMAS.pdf"target="_blank" class="btn btn-primary align-self-start">Abrir Resolución</a>
-        `;
+        fetch('http://localhost:1337/api/plan-studios')  
+        .then(response => response.json())  
+        .then(data => {
+          const pdfUrl = data.data[0].urlPdf;
+      
+          contentContainer.innerHTML = `
+            <p>La resolución CU-536-2019-UNAMBA aprueba el plan de estudios y la malla curricular de la Escuela profesional de Ingeniería Informática y de Sistemas.</p>
+            <a href="${pdfUrl}" target="_blank" class="btn btn-primary align-self-start">Abrir Resolución</a>
+          `;
+        })
+        .catch(error => {
+          console.error('Error al consumir la API:', error);
+          contentContainer.innerHTML = '<p>No se pudo cargar la resolución.</p>';
+        });
+      
         break;
       default:
         contentContainer.innerHTML = `<p>Seleccione una sección.</p>`;
