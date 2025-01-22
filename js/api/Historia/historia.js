@@ -1,3 +1,4 @@
+  //---------------------------------------------------------------- GET HISTORIA
 document.addEventListener('DOMContentLoaded', function() {
     fetch('http://localhost:1337/api/historias')
       .then(response => response.json())

@@ -110,350 +110,59 @@
   });
 
   //---------------------------------------------------------------- MODALES
-  //DONWLOAD
-  const showModalBtn = document.getElementById("showModalBtn");
-  const myModal = new bootstrap.Modal(document.getElementById("myModal"));
-  showModalBtn.addEventListener("click", function () {
-    myModal.show();
-  });
 
-  const pdfFiles = [
-    {
-      name: "Currículo de estudios - 2014",
-      size: 102400,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "Estadísticas 2018 al 2022",
-      size: 204800,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 512000,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 256000,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 153600,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 1048576,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 768000,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 1280000,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 640000,
-      path: "pdf/documento1.pdf",
-    },
-    {
-      name: "NUMERO DE INGRESANTES POR SEMESTRE",
-      size: 512000,
-      path: "pdf/documento1.pdf",
-    },
-  ];
 
-  function loadPdfFiles() {
-    const tableBody = document.getElementById("document-list");
-    tableBody.innerHTML = "";
+  //------------------------------------ DOCENTES
 
-    pdfFiles.forEach((file) => {
-      const row = document.createElement("tr");
-
-      const nameCell = document.createElement("td");
-      const nameLink = document.createElement("a");
-      nameLink.href = file.path;
-      nameLink.target = "_blank";
-      nameLink.textContent = file.name;
-      nameCell.appendChild(nameLink);
-      row.appendChild(nameCell);
-
-      const dateCell = document.createElement("td");
-      const date = new Date();
-      dateCell.textContent = date.toISOString().split("T")[0];
-      row.appendChild(dateCell);
-
-      const sizeCell = document.createElement("td");
-      const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
-      sizeCell.textContent = `${sizeInMB} MB`;
-      row.appendChild(sizeCell);
-
-      tableBody.appendChild(row);
-
-      row.addEventListener("mouseenter", () => {
-        row.style.backgroundColor = "#edcb65";
-      });
-
-      row.addEventListener("mouseleave", () => {
-        row.style.backgroundColor = "";
-      });
-    });
-  }
-
-  document.getElementById("showModalBtn").addEventListener("click", () => {
-    const modalElement = document.getElementById("myModal");
-    const modal = new bootstrap.Modal(modalElement);
-    modal.show();
-    loadPdfFiles();
-  });
-
-  //DOCENTES
-  const showModalBtn2 = document.getElementById("showModalBtn2");
-  const myModal2 = new bootstrap.Modal(document.getElementById("myModal2"));
   showModalBtn2.addEventListener("click", function () {
     myModal2.show();
   });
 
-  const docentes = [
-    {
-      name: "Manuel Jesús Ibarra Cabrera",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. Pri-TC",
-      email: "mibarra@unamba.edu.pe",
-      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=2511",
-    },
-    {
-      name: "Ecler Mamani Vilca",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. Pri-TC",
-      email: "emamani@unamba.edu.pe",
-      cv: "https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=4885",
-    },
-    {
-      name: "Erech Ordoñez Ramos",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. Pri-TC",
-      email: "eordonez@unamba.edu.pe",
-    },
-    {
-      name: "José Luis Merma Aroni",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. Pri-TC",
-      email: "jmerma@unamba.edu.pe",
-    },
-    {
-      name: "Evelyn Naida Luque Ochoa",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "eluque@unamba.edu.pe",
-    },
-    {
-      name: "Francisco Cari Incahuanco",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "fcari@unamba.edu.pe",
-    },
-    {
-      name: "Marleny Peralta Ascues",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "mperalta@unamba.edu.pe",
-      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=96584",
-    },
-    {
-      name: "Ebert Gomez Aiquipa",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "egomez@unamba.edu.pe",
-    },
-    {
-      name: "Nora Gladys Echegaray Peña",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "nechegaray@unamba.edu.pe",
-    },
-    {
-      name: "Maryluz Cuentas Toledo",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "mcuentas@unamba.edu.pe",
-      cv: "https://servicio-renacyt.concytec.gob.pe/ficha-renacyt/?idInvestigador=13799",
-    },
-    {
-      name: "Mario Aquino Cruz",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "maquino@unamba.edu.pe",
-      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=98716",
-    },
-    {
-      name: "Hesmeralda Rojas Enriquez",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "hrojas@unamba.edu.pe",
-      cv: "https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=36648",
-    },
-    {
-      name: "Lintol Contreras Salas",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "P. ASOC-TC",
-      email: "lcontreras@unamba.edu.pe",
-    },
-    {
-      name: "Ronald Alberto Renteria Ayquipa",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "rrenteria@unamba.edu.pe",
-    },
-    {
-      name: "Rafael Ricardo Quispe Merma",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "rquispe@unamba.edu.pe",
-    },
-    {
-      name: "Kevin Arnold Arias Figueroa",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "karias@unamba.edu.pe",
-    },
-    {
-      name: "Yonatan Mamani Coaquira",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "ymamani@unamba.edu.pe",
-    },
-    {
-      name: "Virgilio Martinez Duran",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTP",
-      email: "vmartinez@unamba.edu.pe",
-    },
-    {
-      name: "Alejandrina Huaylla Quispe",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB1",
-      email: "ahuaylla@unamba.edu.pe",
-    },
-    {
-      name: "Luis Miguel Alfaro Chirinos",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB1",
-      email: "lalfaro@unamba.edu.pe",
-    },
-    {
-      name: "Elvio Tintaya Zegarra",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB1",
-      email: "etintaya@unamba.edu.pe",
-    },
-    {
-      name: "Betsabe Milagros Ccolqque Ruiz",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB1",
-      email: "bccolqque@unamba.edu.pe",
-    },
-    {
-      name: "Luz Liliana Criado Huaylla",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB1",
-      email: "lcriado@unamba.edu.pe",
-    },
-    {
-      name: "Yuliana Miriam Tomaylla Gutierrez",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB2",
-      email: "ytomaylla@unamba.edu.pe",
-    },
-    {
-      name: "Karina Gamarra Peralta",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "DCB2",
-      email: "kgamarra@unamba.edu.pe",
-    },
-    {
-      name: "Moises Delfin Jove Yucra",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "mjove@unamba.edu.pe",
-    },
-    {
-      name: "John Abraham Aguirre Carrasco",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "jaguirre@unamba.edu.pe",
-    },
-    {
-      name: "Daryl Andres Huaman Lopez",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "AuxTC",
-      email: "dhuaman@unamba.edu.pe",
-    },
-    {
-      name: "Kely Segundo Villa",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "JP",
-      email: "ksegundo@unamba.edu.pe",
-    },
-    {
-      name: "Nancy Arone Huarcaya",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "JP",
-      email: "narone@unamba.edu.pe",
-    },
-    {
-      name: "Cesar Isaac Diaz Navarro",
-      degree: "Ingeniero Informático y Sistemas",
-      category: "JP",
-      email: "cdiaz@unamba.edu.pe",
-    },
-  ];
-
-  function loadDocentes() {
-    const tableBody = document.getElementById("docentes-list");
+  async function loadDocentes() {
+    const tableBody = document.getElementById("docentes-list2");
     tableBody.innerHTML = "";
 
-    docentes.forEach((docente) => {
-      const row = document.createElement("tr");
+    try {
+      const response = await fetch("http://localhost:1337/api/docentes");
+      const data = await response.json();
 
-      const nameCell = document.createElement("td");
-      const nameSpan = document.createElement("span");
-      nameSpan.innerHTML = ` <i class="fas fa-user bg-primary" style="font-size: 10px; width: 25px; height: 25px; display: inline-flex; align-items: center; justify-content: center; color: white; border-radius: 50%;"></i> ${docente.name}`;
-      nameCell.appendChild(nameSpan);
-      row.appendChild(nameCell);
+      data.data.forEach((docente) => {
+        const row = document.createElement("tr");
 
-      const degreeCell = document.createElement("td");
-      degreeCell.textContent = docente.degree;
-      row.appendChild(degreeCell);
+        const nameCell = document.createElement("td");
+        const nameSpan = document.createElement("span");
+        nameSpan.innerHTML = ` <i class="fas fa-user bg-primary" style="font-size: 10px; width: 25px; height: 25px; display: inline-flex; align-items: center; justify-content: center; color: white; border-radius: 50%;"></i> ${docente.nombre}`;
+        nameCell.appendChild(nameSpan);
+        row.appendChild(nameCell);
 
-      const categoryCell = document.createElement("td");
-      categoryCell.textContent = docente.category;
-      row.appendChild(categoryCell);
+        const degreeCell = document.createElement("td");
+        degreeCell.textContent = docente.gradoAcademico;
+        row.appendChild(degreeCell);
 
-      const emailCell = document.createElement("td");
-      const emailIcon = document.createElement("a");
-      emailIcon.href = `mailto:${docente.email}`;
-      emailIcon.innerHTML = `<i class="fas fa-envelope"></i`;
-      emailCell.appendChild(emailIcon);
-      row.appendChild(emailCell);
+        const categoryCell = document.createElement("td");
+        categoryCell.textContent = docente.category;
+        row.appendChild(categoryCell);
 
-      const cvCell = document.createElement("td");
-      const cvLink = document.createElement("a");
-      cvLink.href = docente.cv;
-      cvLink.target = "_blank";
-      cvLink.innerHTML = `<i class="fas fa-file-alt"></i>`;
-      cvCell.appendChild(cvLink);
-      row.appendChild(cvCell);
+        const emailCell = document.createElement("td");
+        const emailIcon = document.createElement("a");
+        emailIcon.href = `mailto:${docente.correo}`;
+        emailIcon.innerHTML = `<i class="fas fa-envelope"></i>`;
+        emailCell.appendChild(emailIcon);
+        row.appendChild(emailCell);
 
-      tableBody.appendChild(row);
-    });
+        const cvCell = document.createElement("td");
+        const cvLink = document.createElement("a");
+        cvLink.href = docente.cv;
+        cvLink.target = "_blank";
+        cvLink.innerHTML = `<i class="fas fa-file-alt"></i>`;
+        cvCell.appendChild(cvLink);
+        row.appendChild(cvCell);
+
+        tableBody.appendChild(row);
+      });
+    } catch (error) {
+      console.error("Error loading docentes:", error);
+    }
   }
 
   document.getElementById("showModalBtn2").addEventListener("click", () => {
@@ -462,6 +171,59 @@
     modal.show();
     loadDocentes();
   });
+
+  //------------------------------------- PDF
+
+  showModalBtn.addEventListener("click", function () {
+    myModal.show();
+  });
+
+  async function loadDocumentos() {
+    const tableBody = document.getElementById("document-list");
+    tableBody.innerHTML = "";
+
+    try {
+        const response = await fetch("http://localhost:1337/api/documentos");
+        const data = await response.json();
+
+        data.data.forEach((documento) => {
+            const row = document.createElement("tr");
+
+            const nameCell = document.createElement("td");
+            const nameLink = document.createElement("a");
+            nameLink.href = documento.urlPdf;
+            nameLink.target = "_blank";
+            nameLink.textContent = documento.titulo;
+            nameCell.appendChild(nameLink);
+            row.appendChild(nameCell);
+
+            const dateCell = document.createElement("td");
+            dateCell.textContent = documento.fechaPublicacion;
+            row.appendChild(dateCell);
+
+            tableBody.appendChild(row);
+
+            row.addEventListener("mouseenter", () => {
+                row.style.backgroundColor = "#edcb65";
+            });
+
+            row.addEventListener("mouseleave", () => {
+                row.style.backgroundColor = "";
+            });
+        });
+    } catch (error) {
+        console.error("Error loading documentos:", error);
+    }
+}
+
+
+  document.getElementById("showModalBtn").addEventListener("click", () => {
+    const modalElement = document.getElementById("myModal");
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+    loadDocumentos();
+  });
+  
 })(jQuery);
 
 //---------------------------------------------------------------- PLAN STUDY
@@ -580,7 +342,9 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
 
       case "plan-de-estudios":
-        fetch("http://localhost:1337/api/plan-studio-asignaturas?pagination[page]=1&pagination[pageSize]=100")
+        fetch(
+          "http://localhost:1337/api/plan-studio-asignaturas?pagination[page]=1&pagination[pageSize]=100"
+        )
           .then((response) => response.json())
           .then((data) => {
             const semestres = data.data.reduce((acc, item) => {
@@ -675,21 +439,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         break;
       case "resolucion":
-        fetch('http://localhost:1337/api/plan-studios')  
-        .then(response => response.json())  
-        .then(data => {
-          const pdfUrl = data.data[0].urlPdf;
-      
-          contentContainer.innerHTML = `
+        fetch("http://localhost:1337/api/plan-studios")
+          .then((response) => response.json())
+          .then((data) => {
+            const pdfUrl = data.data[0].urlPdf;
+
+            contentContainer.innerHTML = `
             <p>La resolución CU-536-2019-UNAMBA aprueba el plan de estudios y la malla curricular de la Escuela profesional de Ingeniería Informática y de Sistemas.</p>
             <a href="${pdfUrl}" target="_blank" class="btn btn-primary align-self-start">Abrir Resolución</a>
           `;
-        })
-        .catch(error => {
-          console.error('Error al consumir la API:', error);
-          contentContainer.innerHTML = '<p>No se pudo cargar la resolución.</p>';
-        });
-      
+          })
+          .catch((error) => {
+            console.error("Error al consumir la API:", error);
+            contentContainer.innerHTML =
+              "<p>No se pudo cargar la resolución.</p>";
+          });
+
         break;
       default:
         contentContainer.innerHTML = `<p>Seleccione una sección.</p>`;
