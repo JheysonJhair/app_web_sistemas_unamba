@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a
                   href="${tesis.urlPdf}"
                   download="tesis.pdf"
+                  target="_blank"
                   class="text-decoration-none card border-0 shadow-sm h-100 hover-effect"
                 >
                   <div class="d-flex align-items-start p-2">

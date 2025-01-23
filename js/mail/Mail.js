@@ -1,6 +1,6 @@
-const EMAILJS_PUBLIC_KEY = "655ZqzDPriZvlSmhe";
-const EMAILJS_SERVICE_ID = "service_rb9cvb6";
-const EMAILJS_TEMPLATE_ID = "template_v58mzl4";
+const EMAILJS_PUBLIC_KEY = "WVmoO63aA5ExPfyT5";
+const EMAILJS_SERVICE_ID = "service_v2gszkx";
+const EMAILJS_TEMPLATE_ID = "template_kbevo8p";
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -15,7 +15,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   successMessage.style.display = "none";
   errorMessage.style.display = "none";
 
-  emailjs.send("service_rb9cvb6", "template_v58mzl4", {
+  emailjs.send("service_v2gszkx", "template_kbevo8p", {
     message: message,
     email: email,
   })
