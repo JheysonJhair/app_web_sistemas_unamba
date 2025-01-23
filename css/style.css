@@ -10516,3 +10516,20 @@ h6,
   transform: skewY(5deg); 
   margin: 0;
 }
+
+.success-message,
+.error-message {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.success-message {
+  background-color: #3dbf86; 
+}
+
+.error-message {
+  background-color: #e2616c;  
+}

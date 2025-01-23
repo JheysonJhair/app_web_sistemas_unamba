@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -818,23 +819,27 @@
                 <div class="card-header bg-light text-center p-4">
                   <h1 class="m-0">Envía un mensaje</h1>
                 </div>
+                <div id="success-message" class="success-message">¡Mensaje enviado exitosamente!</div>
+                <div id="error-message" class="error-message">Ocurrió un error al enviar el mensaje. Inténtalo nuevamente.</div>
                 <div class="card-body rounded-bottom bg-primary p-5">
-                  <form>
+                  <form id="contact-form">
                     <div class="form-group">
                       <input
-                        type="text"
-                        class="form-control border-0 p-4"
-                        placeholder="Tu nombre"
-                        required="required"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
+                        id="email"
                         type="email"
                         class="form-control border-0 p-4"
                         placeholder="Tu email"
                         required="required"
                       />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        id="message"
+                        class="form-control border-0 p-4"
+                        placeholder="Mensaje"
+                        required="required"
+                 
+                      ></textarea>
                     </div>
                     <div>
                       <button
@@ -845,6 +850,7 @@
                       </button>
                     </div>
                   </form>
+                  
                 </div>
               </div>
             </div>
@@ -1172,5 +1178,6 @@
     <script src="js/api/Noticias/Noticias.js"></script>
     <script src="js/api/Galeria/Galeria.js"></script>
     <script src="js/api/Tesis/Tesis.js"></script>
+    <script src="js/mail/Mail.js"></script>
   </body>
 </html>
